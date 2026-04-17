@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+project/__init__.py
+project/acp.py
+project/constants.py
+project/run_worker.py
+project/workflow.py
+major_project.egg-info/PKG-INFO
+major_project.egg-info/SOURCES.txt
+major_project.egg-info/dependency_links.txt
+major_project.egg-info/requires.txt
+major_project.egg-info/top_level.txt

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  major-project-worker:
+    build: .
+    container_name: major-project-worker
+    ports:
+      - "8000:8000"
+    environment:
+      - AGENT_NAME=major-project
+      - WORKFLOW_NAME=MajorProjectWorkflow
+      - WORKFLOW_TASK_QUEUE=major-project-queue
+      - TEMPORAL_ADDRESS=host.docker.internal:7233
+      - TEMPORAL_NAMESPACE=default
+      - LITELLM_API_KEY=${LITELLM_API_KEY}
+      - AGENTEX_BASE_URL=http://host.docker.internal:5003
+      - AGENT_API_KEY=${AGENT_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped

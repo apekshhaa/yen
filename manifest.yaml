@@ -1,0 +1,78 @@
+build:
+  context:
+    root: ../../../
+    include_paths:
+      - agents/red-cell
+    dockerfile: agents/red-cell/Dockerfile
+    dockerignore: agents/red-cell/.dockerignore
+
+local_development:
+  agent:
+    port: 8003
+    host_address: host.docker.internal
+  paths:
+    acp: project/acp.py
+    worker: project/run_worker.py
+
+agent:
+  acp_type: async
+  name: red-cell
+  description: |
+    Red-Cell AI Pentester - Continuous security assessment agent that discovers
+    and validates vulnerabilities across your attack surface. Features multi-agent
+    architecture with built-in safety guardrails and human-in-the-loop escalation.
+
+  temporal:
+    enabled: true
+    workflows:
+      - name: MajorProjectWorkflow
+        queue_name: red-cell-queue
+
+  env:
+    AGENT_NAME: red-cell
+    ENVIRONMENT: qa
+    UVICORN_PORT: "443"
+    ACP_PORT: 443
+    DATABASE_URL: postgresql://localhost:5432
+    TEMPORAL_ADDRESS: localhost:7233
+    WORKFLOW_TASK_QUEUE: red-cell-queue
+    WORKFLOW_NAME: MajorProjectWorkflow
+    REDIS_URL: redis://localhost:6379
+    MONGODB_URI: mongodb://localhost:27017
+    MONGODB_DATABASE_NAME: agentex
+    WATCHFILES_FORCE_POLLING: "true"
+    ENABLE_HEALTH_CHECK_WORKFLOW: "true"
+    AGENTEX_SERVER_TASK_QUEUE: agentex-server-queue
+    AGENTEX_BASE_URL: "http://localhost:5003"
+    ACP_URL: "https://red-cell.loca.lt"
+    # LLM Configuration
+    OPENAI_API_KEY: ""
+    OPENAI_BASE_URL: "https://openrouter.ai/api/v1"
+    OPENAI_MODEL: "deepseek/deepseek-v3.2-exp"
+    # Safety Configuration
+    SAFETY_MODE: strict
+    REQUIRE_HUMAN_APPROVAL: "true"
+    MAX_SCAN_CONCURRENCY: "5"
+    SCAN_RATE_LIMIT: "100"
+
+  credentials:
+    - env_var_name: "OPENAI_API_KEY"
+      secret_name: "red-cell-secret"
+      secret_key: "openai-api-key"
+
+deployment:
+  image:
+    repository: "sre/agents"
+    tag: "latest"
+  global:
+    agent:
+      name: "red-cell"
+      description: "Red-Cell AI Pentester - Continuous security assessment"
+    replicaCount: 1
+    resources:
+      requests:
+        cpu: "500m"
+        memory: "1Gi"
+      limits:
+        cpu: "2000m"
+        memory: "4Gi"
