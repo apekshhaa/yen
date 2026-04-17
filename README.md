@@ -1,21 +1,21 @@
-# 🛡️ Major Project - AI-Powered Autonomous Penetration Testing Platform
+#  Project - AI-Powered Autonomous Penetration Testing Platform
 
 > **Enterprise-Grade Security Intelligence Meets AI Reasoning**
 
 An autonomous, AI-powered penetration testing platform that discovers, analyzes, and validates security vulnerabilities at enterprise scale—with full human oversight, safety guardrails, and professional-grade reporting.
 
-## 🎯 What is Major Project?
+##  What is our Project about?
 
-Major Project harnesses the power of multi-agent AI coordination to automate the entire penetration testing workflow:
+Our Project harnesses the power of multi-agent AI coordination to automate the entire penetration testing workflow:
 
-- **🔍 Intelligent Discovery**: AI-powered asset discovery, API enumeration, and attack surface mapping
-- **🧠 AI Reasoning**: LLM-driven vulnerability analysis with context-aware prioritization
-- **⚡ Safe Exploitation**: Generates and validates proof-of-concept exploits with approval workflows
-- **📊 Professional Reporting**: Executive summaries, technical findings, and remediation guidance
-- **🔄 Continuous Monitoring**: Tracks attack surface changes and detects new vulnerabilities in real-time
-- **🎛️ Human Oversight**: Critical actions require explicit approval; human-in-the-loop at every stage
+- ** Intelligent Discovery**: AI-powered asset discovery, API enumeration, and attack surface mapping
+- ** AI Reasoning**: LLM-driven vulnerability analysis with context-aware prioritization
+- ** Safe Exploitation**: Generates and validates proof-of-concept exploits with approval workflows
+- ** Professional Reporting**: Executive summaries, technical findings, and remediation guidance
+- ** Continuous Monitoring**: Tracks attack surface changes and detects new vulnerabilities in real-time
+- ** Human Oversight**: Critical actions require explicit approval; human-in-the-loop at every stage
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -59,39 +59,39 @@ Major Project harnesses the power of multi-agent AI coordination to automate the
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-## ✨ Key Features
+##  Key Features
 
-### 🔍 Intelligent Attack Surface Discovery
+###  Intelligent Attack Surface Discovery
 - **Domain Enumeration**: Discovers root domains, subdomains, and related assets
 - **API Discovery**: Detects OpenAPI/Swagger, GraphQL, and REST endpoints automatically
 - **Service Mapping**: Port scanning, fingerprinting, and technology detection
 - **Continuous Monitoring**: Real-time alerts on new assets and configuration changes
 
-### 🧠 AI-Powered Vulnerability Analysis
+###  AI-Powered Vulnerability Analysis
 - **LLM Reasoning**: Uses Claude/GPT-4 to analyze vulnerabilities with business context
 - **Intelligent Prioritization**: Scores by exploitability, impact, and asset criticality
 - **Attack Chain Analysis**: Identifies multi-step vulnerability chains
 - **Context Awareness**: Considers security posture and industry standards
 
-### ⚡ Safe Exploitation & Validation
+###  Safe Exploitation & Validation
 - **Proof-of-Concept Generation**: Automatically creates exploit code
 - **Non-Destructive Testing**: Validates without causing damage
 - **Approval Workflows**: Critical actions require human sign-off
 - **Evidence Collection**: Screenshots, logs, and reproduction instructions
 
-### 📊 Professional Reporting
+###  Professional Reporting
 - **Executive Summaries**: High-level risk overview for leadership
 - **Technical Reports**: Detailed findings with reproduction steps and CVSS scores
 - **Remediation Guidance**: Actionable recommendations with priority levels
 - **Dashboard Visualization**: Real-time metrics and assessment progress
 
-### 🎯 Enterprise-Ready
+###  Enterprise-Ready
 - **Human Oversight**: Built-in approval workflows at exploitation stage
 - **Audit Trail**: Complete logging of all actions and approvals
 - **Multi-Channel Alerts**: Slack, PagerDuty, Microsoft Teams, Email
 - **Compliance Tracking**: Tracks assessments against frameworks (OWASP, CWE, etc.)
 
-## 🎨 Frontend Dashboard
+##  Frontend Dashboard
 
 Modern, professional React dashboard with:
 
@@ -105,7 +105,7 @@ Modern, professional React dashboard with:
 
 **Tech Stack**: React 18 • TypeScript • Tailwind CSS • Vite • Zustand • Lucide Icons
 
-## 🔧 System Components
+##  System Components
 
 ### Backend (Python/FastAPI)
 - **`api.py`**: REST API gateway serving the frontend
@@ -135,14 +135,14 @@ Modern, professional React dashboard with:
 - **Reporting Agent**: Professional report generation
 - **Verification & Safety Agent**: Approval and risk assessment
 
-## ⚡ Quick Start (Demo)
+##  Quick Start (Demo)
 
 ### Prerequisites
 - Python 3.12+
 - Node.js 18+
 - Git
 
-### 🎯 Fastest Way to Demo
+###  Fastest Way to Demo
 
 **Windows:**
 ```bash
@@ -153,7 +153,7 @@ start-demo.bat
 ```bash
 bash start-demo.sh
 ```
-Then open **http://localhost:5173** in your browser! ✨
+Then open **http://localhost:5173** in your browser! 
 
 ### Manual Startup (if scripts don't work)
 
@@ -167,7 +167,7 @@ cd major_project
 
 # Start API server
 python -m uvicorn api:app --reload --port 8000
-# ✅ API on http://localhost:8000
+#  API on http://localhost:8000
 ```
 
 **Terminal 2 - Frontend:**
@@ -175,10 +175,10 @@ python -m uvicorn api:app --reload --port 8000
 cd major_project/frontend
 npm install  # First time only
 npm run dev
-# ✅ Dashboard on http://localhost:5173
+#  Dashboard on http://localhost:5173
 ```
 
-### 📱 What to Try in the Demo
+###  What to Try in the Demo
 1. **Hero Section**: Animated shield + "Start Security Assessment" button
 2. **Dashboard**: Real-time metrics, compliance scores, recent assessments
 3. **Assessments**: Click any card to see details modal, create new assessment
@@ -186,7 +186,7 @@ npm run dev
 5. **Dark Mode**: Toggle in top-right corner
 6. **Responsive**: Resize to test mobile layout
 
-## 🛠️ Full Installation
+##  Full Installation
 
 ### Prerequisites for Production
 
@@ -254,11 +254,11 @@ temporal-worker:
     TEAMS_WEBHOOK_URL: "https://outlook.office.com/webhook/..."
 ```
 
-## 🔒 Security Considerations
+##  Security Considerations
 
 ### Human Oversight
 
-Major Project is designed with human oversight at critical points:
+Our Project is designed with human oversight at critical points:
 
 1. **Approval Required**: Exploitation requires explicit user approval
 2. **Scope Limits**: Testing is limited to approved targets
@@ -273,9 +273,9 @@ Major Project is designed with human oversight at critical points:
 
 ### Responsible Use
 
-⚠️ **Important**: Only use Major Project against systems you own or have explicit authorization to test. Unauthorized penetration testing is illegal.
+ **Important**: Only use our Project against systems you own or have explicit authorization to test. Unauthorized penetration testing is illegal.
 
-## 📊 Usage Examples
+##  Usage Examples
 
 ### Starting a Pentest
 
@@ -311,7 +311,7 @@ await handle.signal("approval", {
 })
 ```
 
-## 📈 Monitoring
+##  Monitoring
 
 ### Metrics
 
@@ -333,35 +333,11 @@ logger.info("Starting discovery", extra={
 })
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📄 License
-
-This project is part of the AgentEx platform. See the main repository for license information.
-
-## 🆘 Support
-
-For issues and questions:
-
-1. Check the [documentation](./docs/)
-2. Open a GitHub issue
-3. Contact the security team
-
----
-
-## 📋 Project Status
-
-✅ **v1.0 Demo Ready**
+##  Project Status
+ **v1.0 Demo Ready**
 - Frontend dashboard fully functional with premium UI/UX
 - REST API gateway working with mock data
 - Temporal workflow orchestration framework in place
 - Safety and approval workflows implemented
 - Professional reporting ready
 - Dark mode and responsive design complete
-
-**Built with ❤️ using Temporal • FastAPI • React 18 • TypeScript • Tailwind CSS**
