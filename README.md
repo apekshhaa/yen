@@ -142,8 +142,22 @@ Modern, professional React dashboard with:
 - Node.js 18+
 - Git
 
-### 1️⃣ Backend (API)
+### 🎯 Fastest Way to Demo
 
+**Windows:**
+```bash
+start-demo.bat
+```
+
+**Linux/Mac:**
+```bash
+bash start-demo.sh
+```
+Then open **http://localhost:5173** in your browser! ✨
+
+### Manual Startup (if scripts don't work)
+
+**Terminal 1 - Backend:**
 ```bash
 cd major_project
 
@@ -153,25 +167,24 @@ cd major_project
 
 # Start API server
 python -m uvicorn api:app --reload --port 8000
-# Server runs on http://localhost:8000
+# ✅ API on http://localhost:8000
 ```
 
-### 2️⃣ Frontend (Dashboard)
-
+**Terminal 2 - Frontend:**
 ```bash
 cd major_project/frontend
-npm install
+npm install  # First time only
 npm run dev
-# Dashboard runs on http://localhost:5173
+# ✅ Dashboard on http://localhost:5173
 ```
 
-### 3️⃣ View the Demo
-1. Open http://localhost:5173 in your browser
-2. **Hero Section**: View platform overview with animated shield
-3. **Dashboard Tab**: See real-time metrics and security stats
-4. **Assessments Tab**: Click "Start Security Assessment" or click any assessment for details
-5. **Findings Tab**: View vulnerabilities with live search and filters
-6. **Dark Mode**: Toggle theme in top-right corner
+### 📱 What to Try in the Demo
+1. **Hero Section**: Animated shield + "Start Security Assessment" button
+2. **Dashboard**: Real-time metrics, compliance scores, recent assessments
+3. **Assessments**: Click any card to see details modal, create new assessment
+4. **Findings**: Live search + severity filters
+5. **Dark Mode**: Toggle in top-right corner
+6. **Responsive**: Resize to test mobile layout
 
 ## 🛠️ Full Installation
 
